@@ -1,14 +1,16 @@
-import java.sql.DriverManager;
+import java.sql.*;
 
-public class Connection {
+public class Conn {
 
     Connection c;
-    Connection(){
-        try{
+    Statement s;
+
+    Conn() {
+        try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            c = DriverManager.getConnection("jdbc:mysql:///);
-        }
-        catch(Exception e){
+            c = DriverManager.getConnection("jdbc:mysql:///travelandtourism", "root", "12345");
+            s = c.createStatement();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

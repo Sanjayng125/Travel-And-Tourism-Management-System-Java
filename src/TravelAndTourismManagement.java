@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class TravelAndTourismManagement {
+public class TravelAndTourismManagement {
+    public static void main(String[] args) {
+
+    }
 }
+
